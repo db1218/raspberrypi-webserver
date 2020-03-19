@@ -20,7 +20,7 @@ At the end of this process you will have a running apache web server supporting:
 3. [Installing Packages](#Installing-Packages)
    1. [Apache2](#Apache2)
    2. [PHP](#PHP)
-   3. [MySQL](#MySQL-/-MariaDB)
+   3. [MySQL](#MySQL--MariaDB)
    4. [CloudFlare](#CloudFlare)
 4. [Portforwarding](#Portforwarding)
 
