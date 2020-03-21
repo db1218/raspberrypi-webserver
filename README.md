@@ -72,12 +72,22 @@ The website source files can be located at `/var/www/html`, to access this direc
 
 You can now start adding your website files! Once you upload a file, you can view the changes instantly by refreshing the page in your browser.
 
+#### [SSL/TLS](https://httpd.apache.org/modules/)
+
+This can be enabled by running the following command. `a2` apache2, `en` enable. `mod` modification.
+
+```bash
+sudo a2enmod ssl
+```
+
+You can then put the `.key` and `.pem` files in the ssl directory that is generated after restarting apache
+
 ### [PHP](https://www.php.net/)
 
 PHP is a scripting language that is executed server-side. Unlike Javascript, a client's browser does not download PHP files, but instead the server evaluates them and sends the result to the user. This is important for keeping sensitive information, such as database credentials or api keys, private and away from the eyes of users.
 
 ```bash
-sudo apt-get install php libapache2-mod-php
+sudo apt-get install php libapache2-mod-php php-mysql
 ```
 
 You can check php is installed correctly with `php -v` which should return the current PHP version your PI is using.
