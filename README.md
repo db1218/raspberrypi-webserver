@@ -5,11 +5,7 @@ I've been running a successful website on my Rapsberry PI for a number of years 
 
 ## Aims
 
-At the end of this process you will have a running apache web server supporting:
-
-- PHP
-- Database
-- HTTPS
+At the end of this process you will have a running a LAMP web server (Linux, Apache, MySQL, PHP)
 
 ## Table of Contents
 
@@ -57,7 +53,7 @@ sudo apt-get install apache2
 You can check the web server is running with:
 
 ```bash
-systemctl status apache2
+sudo systemctl status apache2
 ```
 
 <img src="images/apache2-install.png" alt="Apache Install" style="zoom:25%;" />
@@ -129,6 +125,10 @@ Routers can manage portforwarding differently, so this website may be useful in 
 ### [Fail2Ban](https://www.fail2ban.org/wiki/index.php/Main_Page)
 
 After having your server up for a while, take a look at `/var/log/auth.log` to view all login attemps. If your reaction was something along the lines of "*who are these people and why would they want to access my server*" then you're just like me! After showing me this file, a friend recommended some software called **Fail2Ban** which tracks entries (IPs) in this log and automatically blacklists them when a certain number of failed attempts have occured.
+
+```bash
+sudo apt-get install fail2ban
+```
 
 Example log file, where an IP is banned after 5 failed attempts:
 
